@@ -1,0 +1,201 @@
+/* src/components/Card/Card.css */
+
+.ui-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    overflow: hidden;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #ffffff;
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+  }
+  
+  /* Card variants */
+  .ui-card-default {
+    border: 1px solid #e5e7eb;
+  }
+  
+  .ui-card-outlined {
+    border: 1px solid #e5e7eb;
+    background-color: transparent;
+  }
+  
+  .ui-card-elevated {
+    border: none;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+  
+  .ui-card-elevated:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transform: translateY(-2px);
+  }
+  
+  /* Card media */
+  .ui-card-media {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .ui-card-media img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+  }
+  
+  /* Card header */
+  .ui-card-header {
+    padding: 1rem 1rem 0.5rem;
+  }
+  
+  /* Card title */
+  .ui-card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 0.25rem;
+    line-height: 1.25;
+  }
+  
+  /* Card subtitle */
+  .ui-card-subtitle {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Card content */
+  .ui-card-content {
+    padding: 1rem;
+    flex: 1 1 auto;
+    color: #4b5563;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  /* If content follows header without padding */
+  .ui-card-header + .ui-card-content {
+    padding-top: 0;
+  }
+  
+  /* Card actions */
+  .ui-card-actions {
+    display: flex;
+    padding: 0.5rem 1rem 1rem;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  /* Right-aligned actions */
+  .ui-card-actions.ui-card-actions-right {
+    justify-content: flex-end;
+  }
+  
+  /* Card horizontal layout */
+  .ui-card.ui-card-horizontal {
+    flex-direction: row;
+  }
+  
+  .ui-card.ui-card-horizontal .ui-card-media {
+    max-width: 40%;
+    height: auto;
+  }
+  
+  .ui-card.ui-card-horizontal .ui-card-media img {
+    height: 100%;
+  }
+  
+  .ui-card.ui-card-horizontal .ui-card-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  
+  /* Card with clickable behavior */
+  .ui-card.ui-card-clickable {
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+  }
+  
+  .ui-card.ui-card-clickable:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+  
+  /* Card with dividers between sections */
+  .ui-card.ui-card-divided .ui-card-header {
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 1rem;
+  }
+  
+  .ui-card.ui-card-divided .ui-card-actions {
+    border-top: 1px solid #e5e7eb;
+    padding-top: 1rem;
+  }
+  
+  /* Card sizes */
+  .ui-card.ui-card-sm {
+    max-width: 300px;
+  }
+  
+  .ui-card.ui-card-md {
+    max-width: 450px;
+  }
+  
+  .ui-card.ui-card-lg {
+    max-width: 600px;
+  }
+  
+  .ui-card.ui-card-full {
+    width: 100%;
+  }
+  
+  /* Card text colors */
+  .ui-card-content-primary {
+    color: #3b82f6;
+  }
+  
+  .ui-card-content-success {
+    color: #10b981;
+  }
+  
+  .ui-card-content-danger {
+    color: #ef4444;
+  }
+  
+  .ui-card-content-warning {
+    color: #f59e0b;
+  }
+  
+  /* Card background colors */
+  .ui-card-bg-primary {
+    background-color: #3b82f6;
+    color: white;
+  }
+  
+  .ui-card-bg-primary .ui-card-title,
+  .ui-card-bg-primary .ui-card-content {
+    color: white;
+  }
+  
+  .ui-card-bg-primary .ui-card-subtitle {
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .ui-card-bg-light {
+    background-color: #f9fafb;
+  }
+  
+  .ui-card-bg-dark {
+    background-color: #1f2937;
+    color: white;
+  }
+  
+  .ui-card-bg-dark .ui-card-title,
+  .ui-card-bg-dark .ui-card-content {
+    color: white;
+  }
+  
+  .ui-card-bg-dark .ui-card-subtitle {
+    color: rgba(255, 255, 255, 0.8);
+  }

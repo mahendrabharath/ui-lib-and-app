@@ -1,0 +1,228 @@
+/* src/components/Button/Button.css */
+
+.ui-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    text-align: center;
+    text-decoration: none;
+    line-height: 1.5;
+    white-space: nowrap;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  
+  /* Sizes */
+  .ui-button-small {
+    font-size: 0.85rem;
+    padding: 0.25rem 0.75rem;
+    min-height: 2rem;
+  }
+  
+  .ui-button-medium {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    min-height: 2.5rem;
+  }
+  
+  .ui-button-large {
+    font-size: 1.1rem;
+    padding: 0.75rem 1.5rem;
+    min-height: 3rem;
+  }
+  
+  /* Full width */
+  .ui-button-full-width {
+    width: 100%;
+    display: flex;
+  }
+  
+  /* Rounded */
+  .ui-button-rounded {
+    border-radius: 9999px;
+  }
+  
+  /* Variants */
+  .ui-button-primary {
+    background-color: #3b82f6;
+    color: white;
+  }
+  
+  .ui-button-primary:hover {
+    background-color: #2563eb;
+  }
+  
+  .ui-button-primary:active {
+    background-color: #1d4ed8;
+  }
+  
+  .ui-button-secondary {
+    background-color: #6b7280;
+    color: white;
+  }
+  
+  .ui-button-secondary:hover {
+    background-color: #4b5563;
+  }
+  
+  .ui-button-secondary:active {
+    background-color: #374151;
+  }
+  
+  .ui-button-success {
+    background-color: #10b981;
+    color: white;
+  }
+  
+  .ui-button-success:hover {
+    background-color: #059669;
+  }
+  
+  .ui-button-success:active {
+    background-color: #047857;
+  }
+  
+  .ui-button-danger {
+    background-color: #ef4444;
+    color: white;
+  }
+  
+  .ui-button-danger:hover {
+    background-color: #dc2626;
+  }
+  
+  .ui-button-danger:active {
+    background-color: #b91c1c;
+  }
+  
+  .ui-button-warning {
+    background-color: #f59e0b;
+    color: white;
+  }
+  
+  .ui-button-warning:hover {
+    background-color: #d97706;
+  }
+  
+  .ui-button-warning:active {
+    background-color: #b45309;
+  }
+  
+  .ui-button-info {
+    background-color: #3b82f6;
+    color: white;
+  }
+  
+  .ui-button-info:hover {
+    background-color: #2563eb;
+  }
+  
+  .ui-button-info:active {
+    background-color: #1d4ed8;
+  }
+  
+  /* Outlined variants */
+  .ui-button-outlined {
+    background-color: transparent;
+    border: 1px solid;
+  }
+  
+  .ui-button-outlined-primary {
+    color: #3b82f6;
+    border-color: #3b82f6;
+  }
+  
+  .ui-button-outlined-primary:hover {
+    background-color: rgba(59, 130, 246, 0.05);
+  }
+  
+  .ui-button-outlined-secondary {
+    color: #6b7280;
+    border-color: #6b7280;
+  }
+  
+  .ui-button-outlined-secondary:hover {
+    background-color: rgba(107, 114, 128, 0.05);
+  }
+  
+  .ui-button-outlined-success {
+    color: #10b981;
+    border-color: #10b981;
+  }
+  
+  .ui-button-outlined-success:hover {
+    background-color: rgba(16, 185, 129, 0.05);
+  }
+  
+  .ui-button-outlined-danger {
+    color: #ef4444;
+    border-color: #ef4444;
+  }
+  
+  .ui-button-outlined-danger:hover {
+    background-color: rgba(239, 68, 68, 0.05);
+  }
+  
+  .ui-button-outlined-warning {
+    color: #f59e0b;
+    border-color: #f59e0b;
+  }
+  
+  .ui-button-outlined-warning:hover {
+    background-color: rgba(245, 158, 11, 0.05);
+  }
+  
+  .ui-button-outlined-info {
+    color: #3b82f6;
+    border-color: #3b82f6;
+  }
+  
+  .ui-button-outlined-info:hover {
+    background-color: rgba(59, 130, 246, 0.05);
+  }
+  
+  /* Disabled state */
+  .ui-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  /* Focus state */
+  .ui-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+  }
+  
+  /* Add a loading spinner option */
+  .ui-button.ui-button-loading {
+    position: relative;
+    color: transparent;
+  }
+  
+  .ui-button.ui-button-loading::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: calc(50% - 8px);
+    left: calc(50% - 8px);
+    border-radius: 50%;
+    border: 2px solid currentColor;
+    border-color: transparent currentColor currentColor currentColor;
+    animation: button-spin 0.7s linear infinite;
+  }
+  
+  @keyframes button-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
